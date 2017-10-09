@@ -1,8 +1,13 @@
+let quarters = prompt("How many quarters do you have?");
+let dimes = prompt("How many dimes do you have?");
+let nickels = prompt("How many nickels do you have?");
+let pennies = prompt("How many pennies do you have?");
+
 let piggyBank = {
-    "quarters": 12,
-    "nickels": 24,
-    "dimes": 33,
-    "pennies": 57
+    "quarters": quarters,
+    "nickels": nickels,
+    "dimes": dimes,
+    "pennies": pennies
 };
 
 let addItUp = (object) => {
@@ -22,9 +27,10 @@ let addItUp = (object) => {
                          dollarAmount += (object[prop] * .01);
                     }
                 }
-                console.log(dollarAmount);
+                document.write('<h1>You have $' + dollarAmount + '</h1>');
             }
-
+ 
+addItUp(piggyBank);
         
     
 
